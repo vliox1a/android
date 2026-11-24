@@ -1,14 +1,96 @@
-﻿# android
+﻿# DevAssist · 组件清理
 
-Android / phone-side Windows utilities.
+> Windows 桌面工具：通过 USB 调试，扫描并停用 / 卸载安卓机里的常见预置组件。  
+> **单文件分发** · ADB 已内置 · 无需安装
 
-| File | Description |
-|------|-------------|
-| DevAssist.exe | Scan & disable OEM preload components over USB debugging (ADB bundled) |
+[![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-blue)](#)
+[![Size](https://img.shields.io/badge/size-~22%20MB-lightgrey)](#)
+[![ADB](https://img.shields.io/badge/ADB-bundled-success)](#)
 
-## Usage
+---
 
-1. Developer options → USB debugging  
-2. Run DevAssist.exe → Refresh → Scan → Disable  
+## 下载
 
-Windows 10 / 11.
+请到右侧 **Releases** 下载最新版 `DevAssist.exe`（推荐），或直接从仓库根目录获取。
+
+| 文件 | 说明 |
+|------|------|
+| `DevAssist.exe` | 主程序（双击运行，约 22MB） |
+
+> 杀毒软件偶发误报：本工具会调用 ADB 与手机通信，属于正常行为。可加入白名单后使用。
+
+---
+
+## 能做什么
+
+- 按厂商浏览常见预置 / 采集类组件（小米、一加、OPPO、vivo、华为等）
+- 一键扫描本机：已装 / 运行中 / 已停用
+- **停用**（推荐）或 **卸载**（当前用户）
+- 更新系统后可对照历史，提示组件是否被重新启用
+- 本地操作日志可查；支持恢复所选组件
+
+不往手机里安装常驻 App，只改当前用户下的组件状态。
+
+---
+
+## 使用前准备
+
+1. 电脑：Windows 10 / 11  
+2. 手机：用数据线连接电脑  
+3. 打开 **开发人员选项**  
+   - 设置 → 关于手机 → 连续点击「版本号」约 7 次  
+4. 进入开发人员选项，开启 **USB 调试**  
+5. 首次连接时在手机上点「允许」调试
+
+---
+
+## 快速开始
+
+1. 双击 `DevAssist.exe`  
+2. 点 **刷新设备**（识别机型后会自动选厂商）  
+3. 点 **扫描本机**  
+4. 勾选要处理的组件 → **按推荐停用**（或「卸载组件」）  
+5. 需要找回时：勾选后点 **恢复所选**
+
+建议流程：**先停用 → 日常用几天 → 确认无异常再考虑卸载**。
+
+---
+
+## 界面说明（简要）
+
+| 区域 | 作用 |
+|------|------|
+| 左侧厂商列表 | 切换品牌对应组件清单 |
+| 扫描本机 | 读取勾选清单在手机上的状态 |
+| 停用 / 卸载 / 恢复 | 对勾选项执行操作 |
+| 操作日志 | 查看历史处理记录 |
+| 如何恢复 | 内置说明（含命令行恢复方式） |
+
+---
+
+## 注意事项
+
+- 新机 / 刚换卡：部分电信登记类组件可先保留  
+- 「卸载」比「停用」更彻底，少数机型上恢复稍麻烦，优先停用  
+- 系统 OTA 后个别组件可能被重新启用，用本程序再扫一次即可  
+- 删除本软件：删掉 `DevAssist.exe` 即可；日志默认在 `%LOCALAPPDATA%\DevAssist`
+
+---
+
+## 系统要求
+
+- OS：Windows 10 / 11（64 位）
+- 其它：数据线 + 已开启 USB 调试的安卓手机  
+- 依赖：无（ADB 已打包进 exe）
+
+---
+
+## 反馈
+
+Issue / Discussion 均可。请尽量附上：手机型号、系统版本、操作步骤与现象。
+
+---
+
+## License
+
+个人使用 / 学习交流。请自行评估对设备的影响后再操作。
