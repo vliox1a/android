@@ -14,8 +14,6 @@
 | 文件 | 说明 |
 |------|------|
 | [`DevAssist.exe`](./DevAssist.exe) | 主程序（双击运行，约 22MB） |
-| [`DevAssist-v1.0.0-windows-x64.zip`](./DevAssist-v1.0.0-windows-x64.zip) | 压缩包（同内容） |
-
 也可到 [Releases](../../releases) 下载发布版。
 
 ---
@@ -56,8 +54,6 @@
 | 华为 / 荣耀 / 部分 vivo·iQOO | 系统常拦截 ADB（如 `no root permission`、`DELETE_FAILED`）。本工具会尝试停用、卸载、冻结，**仍可能失败** |
 | Shizuku | 通过 ADB 启动时权限≈普通 shell，**不能保证**比本工具更能成功；受保护包有时仍需 root |
 | 显示「未安装」 | 该机没有名单里的包，属正常 |
-
-扫描各品牌都可以试；**能否停用取决于机型策略，不保证全品牌都能清掉。**
 
 ---
 
